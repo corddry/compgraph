@@ -1,7 +1,3 @@
-// TODOS:
-// Generic in a prime field
-// styleguide ordering
-
 use std::cmp::{max, min};
 use std::fmt;
 use std::thread;
