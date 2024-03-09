@@ -279,12 +279,12 @@ mod tests {
         let a_squared = builder.mul(a, a);
         let five = builder.constant(5);
         let a_squared_plus_5 = builder.add(a_squared, five);
-        let y = builder.add(a_squared_plus_5, a);
+        let res = builder.add(a_squared_plus_5, a);
 
         let a_val = 3;
         builder.set_input(a, a_val);
         let expected = builder.constant(a_val * a_val + a_val + 5);
-        builder.assert_equal(y, expected);
+        builder.assert_equal(res, expected);
 
         assert_eq!(builder.evaluate().unwrap(), ());
         assert!(builder.check_constraints().unwrap());
